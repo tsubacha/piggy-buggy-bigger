@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style-top.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <!--リンクとスタイルシート-->
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="slick-1.6.0/slick/slick.min.js"></script>
+    <!--slick slider-->
+    <title>Piggy Buggy Bigger</title>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript">
+    $(function() {
+        $('.slider').slick({
+            infinite: true,
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true, //要素を中央寄せ
+            centerPadding: '0px', //両サイドの見えている部分のサイズ
+            autoplay: true, //自動再生
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    centerMode: false,
+                }
+            }]
+        });
+    });
+    </script>
+    <!--slick sliderジェクリ-->
+    <script>
+    $(function() {
+        $("#menuButton").click(function() {
+            $(this).toggleClass("active"); //メニューボタンの切り替え
+
+            /*-- メニューの開閉 --*/
+            if ($(this).hasClass("active")) {
+                $("body").css("oveflow", "hidden");
+                $("main").animate({
+                    "left": "-50%"
+                }, 400);
+                $(".block-menu")
+                    .show()
+                    .animate({
+                        "left": "50%"
+                    }, 400);
+            } else {
+                $("main").animate({
+                    "left": 0
+                }, 400);
+                $(".block-menu")
+                    .show()
+                    .animate({
+                        "left": "100%"
+                    }, 400, function() {
+                        $(".block-menu").hide();
+                        $("body").css("oveflow", "visuble");
+                    });
+            }
+
+            return false;
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <img src="img/PBB_logo_320.png" alt="Piggy Buggy Bigger" class="miniimage">
+    <div class="header">
+        <div class="PBB-logo">
+            <img src="img/PBB_logo.png" alt="Piggy Buggy Bigger" class="bigimage">
+            <img src="img/PBB_logo_1920.png" alt="Piggy Buggy Bigger" class="megabigimage">
+        </div>
+        <div id="header-bg"></div>
+        <div class="nav">
+            <div class="groval-nav-bg">
+                <ul class="block-menu">
+                    <li id="A"><a href="" class="three-d">ABOUT
+                    <span aria-hidden="true" class="three-d-box">
+      <span class="front">ABOUT</span>
+      <span class="back">ABOUT</span>
+    </span>
+    </a></li>
+                    <li id="B"><a href="" class="three-d">BLOG
+                    <span aria-hidden="true" class="three-d-box">
+      <span class="front">BLOG</span>
+      <span class="back">BLOG</span>
+    </span></a></li>
+                    <li id="C"><a href="" class="three-d">SHOP
+                    <span aria-hidden="true" class="three-d-box">
+      <span class="front">SHOP</span>
+      <span class="back">SHOP</span>
+    </span></a></li>
+                    <li id="D"> <a href="" class="three-d">CONTACT
+                    <span aria-hidden="true" class="three-d-box">
+      <span class="front">CONTACT</span>
+      <span class="back">CONTACT</span>
+    </span></a></li>
+                    <!-- more items here -->
+                </ul>
+            </div>
+            <div class="header-sns">
+                <div id="sns-follow"><img src="img/sns-follow-me.png" class="followme"></div>
+                <ul class="header-a">
+                    <li>
+                        <a href=""><img src="img/twitter_icon.png"></a>
+                    </li>
+                    <ii>
+                        <a href=""><img src="img/insta_icon.png"></a>
+                    </ii>
+                    <li>
+                        <a href=""><img src="img/youtube_icon.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a id="menuButton" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    </div>
+    <div class="contents">
+        <ul class="slider">
+            <li>
+                <a href="#"><img src="img/slide_01.jpg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/slide_02.jpg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/slide_03.jpg"></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/slide_04.jpg"></a>
+            </li>
+        </ul>
+        <div class="infomation">
+            <div class="infomation-top">
+                <div id="infomation-logo"><img src="img/infomation-logo.png" width="220" height="50"></div>
+                <div class="day-title">
+                    <time>2017-04-01</time>
+                    <h1>リトルカブ コスパ 最高</h1></div>
+                <hr class="stars">
+                <div id="top-text">
+                    <p>今日は南町田（地元）〜自由が丘まで リトルカブで飛ばしてみた。
+                        <br>市が尾の時点で15分経過。 自由が丘到着 ざっと
+                        <font color="red">所要時間50分。</font>
+                        <br>
+                        <br>ここでリトルカブの燃費の良さを確信。
+                        <br>ちなみにカブのガソリン、 補給から満タンまでしても
+                        <font color="#fbb03b">300円弱</font>。
+                        <br>
+                        <br>電車で行くと 南町田〜自由が丘まで所要時間42分。
+                        <br>電車賃は片道270円。 往復540円。
+                        <br>
+                        <br>まぁー安いっちゃ安いが 所要時間とカブの燃費考えたら 断然バイクのほうがいい。
+                        <br>だが、原付を止める場所がなかなかない、、
+                        <br>
+                        <br>目星を付けていた
+                        <font color="#73abbb">自由が丘駅第一自転車等駐車場 東京都世田谷区奥沢5-42-14</font>
+                        <br>ここは、午後3時の時点で満車だった。 ...OTL まぁ、一時駐輪 1日100円だもんな。
+                        <br>そりゃみんな群がるわ。 てことで他を探す。 次にネット検索して、嗅ぎつけたのがココ。
+                        <br>
+                        <br>
+                        <font color="#73abbb">自由が丘スイーツフォレスト（バイク駐輪場） 東京都目黒区緑が丘2-25-7</font>
+                        <br>ここはなんと22:00まで
+                        <font color="red">無料！</font>これはどケチ庶民からしたら神空間！
+                        <br>ってことでありがた〜く駐車させていただく。 結構ギュウギュウだったけどね。
+                        <br>
+                        <br>かたっぱしから自転車どかしてけば(寄せるって意味ねw）余裕で止めれるぜ！
+                        <br>ってことで今から自由が丘のスタバで web制作。
+                        <br> 、、、電源ある席は2階の窓際の席だけなのねヽ(゜▽、゜)ノ
+                        <br>
+                        <br>わたしが着いた午後3時すぎには 電源使える席は満席でした。
+                        <br>皆様、自由が丘のスタバでノマドる時は 開店ダッシュで入店しましょう。笑
+                        <br>最後に俺様のマイバイクの紹介だ！
+                    </p>
+                </div>
+                <hr class="stars">
+            </div>
+            <div id="little-cub"><img src="img/little-cub-top.gif"></div>
+        </div>
+        <div class="other-menu">
+            <div class="side-menu">
+                <div id="insta-window">
+                    <!-- SnapWidget -->
+                    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                    <iframe src="https://snapwidget.com/embed/445116" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+                </div>
+                <div id="other-hp">
+                    -Other homepage-
+                </div>
+                <div class="other-hp-bana">
+                    <ul>
+                        <li>
+                            <a href=""><img src="img/PBRY_bana.png" width="184" height="86"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/NINA_bana.png" width="184" height="86"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copy-right">copyright©2017 TSUBACHA.ALL Right Reserved</div>
+    </div>
+    </div>
+</body>
+
+</html>

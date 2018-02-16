@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset=”utf-8″ />
+    <link rel="stylesheet" type="text/css" href="css/style-1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <!--slick slider-->
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="slick-1.6.0/slick/slick.min.js"></script>
+    <title>Piggy Buggy Bigger</title>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+    $(function() {
+        $("#menuButton").click(function() {
+            $(this).toggleClass("active"); //メニューボタンの切り替え
+
+            /*-- メニューの開閉 --*/
+            if ($(this).hasClass("active")) {
+                $("body").css("oveflow", "hidden");
+                $("main").animate({
+                    "left": "-50%"
+                }, 400);
+                $("aside")
+                    .show()
+                    .animate({
+                        "left": "50%"
+                    }, 400);
+            } else {
+                $("main").animate({
+                    "left": 0
+                }, 400);
+                $("aside")
+                    .show()
+                    .animate({
+                        "left": "100%"
+                    }, 400, function() {
+                        $("aside").hide();
+                        $("body").css("oveflow", "visuble");
+                    });
+            }
+
+            return false;
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <a id="menuButton" href="#">
+        <span>ああああああ</span>
+        <span>あああああああ</span>
+        <span>ああああ</span>
+    </a>
+</body>
+
+</html>
